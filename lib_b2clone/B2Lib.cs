@@ -64,8 +64,6 @@ namespace lib_b2clone
                 Log.Information("Scan started | Path = {0}", localPath);
 
                 int lastToUpload = UploadList.Count;
-
-
                 int count = 0;
 
                 IEnumerable<string> dirEnumerable =
@@ -73,7 +71,7 @@ namespace lib_b2clone
 
                 Stopwatch stopWatch = Stopwatch.StartNew();
 
-                await dirEnumerable.ForEachAsync(1, async filePath =>
+                await dirEnumerable.ForEachAsync(Environment.ProcessorCount, async filePath =>
                 {
                     try
                     {

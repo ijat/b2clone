@@ -26,6 +26,7 @@ namespace b2clone
                 FileVersionInfo fileVersionInfo = FileVersionInfo.GetVersionInfo(assembly.Location);
 
                 Log.Information("[b2clone v{0}]", fileVersionInfo.ProductVersion);
+                Console.Title = $"[b2clone v{fileVersionInfo.ProductVersion}]";
                 
                 if (!File.Exists(userConfPath))
                 {
