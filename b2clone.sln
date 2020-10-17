@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "b2clone", "b2clone\b2clone.csproj", "{C7C8E468-3E2A-4BB9-B1BF-C5489BFBCC7F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "lib_b2clone", "lib_b2clone\lib_b2clone.csproj", "{BBC1AF50-6CC9-409B-8D47-5BC1652D60B2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7C8E468-3E2A-4BB9-B1BF-C5489BFBCC7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7C8E468-3E2A-4BB9-B1BF-C5489BFBCC7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7C8E468-3E2A-4BB9-B1BF-C5489BFBCC7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7C8E468-3E2A-4BB9-B1BF-C5489BFBCC7F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBC1AF50-6CC9-409B-8D47-5BC1652D60B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBC1AF50-6CC9-409B-8D47-5BC1652D60B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBC1AF50-6CC9-409B-8D47-5BC1652D60B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBC1AF50-6CC9-409B-8D47-5BC1652D60B2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
