@@ -1,6 +1,6 @@
 # b2clone
 
-A simple CLI tool to push local folders and files to Backblaze B2 cloud.
+A CLI tool to upload local folders and files to Backblaze B2 bucket.
 
 ## Why create b2clone?
 
