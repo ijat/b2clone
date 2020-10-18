@@ -8,6 +8,11 @@
         <AssemblyName>lib_b2clone</AssemblyName>
     </PropertyGroup>
 
+    <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+      <PlatformTarget>x64</PlatformTarget>
+      <DebugType>none</DebugType>
+    </PropertyGroup>
+
     <ItemGroup>
       <PackageReference Include="B2Net" Version="0.7.5" />
       <PackageReference Include="HashDepot" Version="2.0.3" />
