@@ -49,7 +49,7 @@ This is my initiative to create my own Backblaze B2 client instead of using thir
 
 ### Linux/MacOs
 
-* Should be same like Windows but **I do not test or run this tool all on these OSes**. It might be broken.
+* Should be same like Windows but **I do not test or run this tool on these OSes**. It might be broken.
 
 ---
 b2clone - Ijat.my
