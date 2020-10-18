@@ -45,8 +45,8 @@ namespace b2clone
                     {
                         await b2Lib.ScanFolderForUploads(pathKeyPair.Value, pathKeyPair.Key);
                     }
-                    
-                    await b2Lib.UploadToB2();
+
+                    await b2Lib.StartUploading();
                 }
                 else 
                     throw new Exception("Unable to read user configuration. Please check again your configuration file.");
@@ -75,6 +75,7 @@ namespace b2clone
         private static void InitLogging()
         {
             Log.Logger = new LoggerConfiguration()
+                .MinimumLevel.Override("Microsoft", LogEventLevel.Error)
                 .MinimumLevel.Verbose()
                 .WriteTo.File("b2clone-log.txt.gz", hooks: new GZipHooks())
                 .WriteTo.Console(restrictedToMinimumLevel: LogEventLevel.Information,

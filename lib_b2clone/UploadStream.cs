@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using Memstate.Models.KeyValue;
 
 namespace lib_b2clone
 {
@@ -14,6 +15,20 @@ namespace lib_b2clone
             CurrentBytes = currentBytes;
             TotalBytes = totalBytes;
             Percent = (1.0f * currentBytes / totalBytes) * 100;
+        }
+    }
+
+    public class UploadParts
+    {
+        public long LastBytes {get;set;}
+        public long CurrentBytes { get; set; }
+        public int PartNumber { get; set; }
+
+        public UploadParts(long lastBytes, long currentBytes, int partNumber)
+        {
+            LastBytes = lastBytes;
+            CurrentBytes = currentBytes;
+            PartNumber = partNumber;
         }
     }
     
@@ -50,12 +65,12 @@ namespace lib_b2clone
 
         public override long Seek(long offset, SeekOrigin origin)
         {
-            throw new System.NotImplementedException();
+            return m_input.Seek(offset, origin);
         }
 
         public override void SetLength(long value)
         {    
-            throw new System.NotImplementedException();
+            m_input.SetLength(value);
         }
 
         public override void Write(byte[] buffer, int offset, int count)
@@ -64,7 +79,7 @@ namespace lib_b2clone
         }
 
         public override bool CanRead => true;
-        public override bool CanSeek => false;
+        public override bool CanSeek => true;
         public override bool CanWrite => false;
         public override long Length => m_length;
 
